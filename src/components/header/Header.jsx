@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css';
 import logo from '../../assets/imgs/Da7m-01.png';
 
 const Header = () => {
+
+    /*=============================== Toggle Menu ========================================*/
+    const [Toggle,showMenu] = useState(false);
+
     return (
         <header className="header">
             <nav className="nav container">
@@ -10,7 +14,7 @@ const Header = () => {
                     <img src={logo} alt="logo" width='80px' />
                 </a>
 
-                <div className="nav_menu">
+                <div className={Toggle ? "nav_menu show-menu" : "nav_menu"}>
                     <ul className="nav_list grid">
 
                         <li className="nav_item">
@@ -57,10 +61,10 @@ const Header = () => {
 
 
                     </ul>
-                    <i className="uil uil-times nav_close"></i>
+                    <i className="uil uil-times nav_close" onClick={() => showMenu(!Toggle)}></i>
                 </div>
 
-                <div className="nav_toggle">
+                <div className="nav_toggle" onClick={() => showMenu(!Toggle)}>
                     <i className="uil uil-apps"></i>
                 </div>
             </nav>
