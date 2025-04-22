@@ -7,14 +7,14 @@ const Header = () => {
         <header className="header">
             <nav className="nav container">
                 <a href="index.html" className="nav_logo">
-                    <img src={logo} alt="logo" width='100px' />
+                    <img src={logo} alt="logo" width='80px' />
                 </a>
 
                 <div className="nav_menu">
                     <ul className="nav_list grid">
 
                         <li className="nav_item">
-                            <a href="#home" className="nav_link">
+                            <a href="#home" className="nav_link active-link">
                                 <i className="uil uil-estate nav_icon"></i>
                                 Home
                             </a>

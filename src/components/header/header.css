@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--container-color);
+    background-color: var(--body-color);
 }
 
 .nav {
@@ -16,17 +16,17 @@
 }
 
 .nav_logo,
-.nav_toggle{
+.nav_toggle {
     color: var(--title-color);
     font-weight: var(--medium);
 }
 
-.nav_list{
+.nav_list {
     display: flex;
     column-gap: 2rem;
 }
 
-.nav_link{
+.nav_link {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,10 +38,40 @@
 
 .nav_icon,
 .nav_close,
-.nav_toggle{
+.nav_toggle {
     display: none;
 }
 
 
 /* --- active link --- */
 
+.active-link,
+.nav_link:hover {
+    color: var(--title-color-dark);
+
+}
+
+
+/*===============================Break Points========================================*/
+/* --- medium devices --- */
+@media screen and (max-width:768px) {
+    .header{
+        top: initial;
+        bottom: 0;
+    }
+
+    .nav{
+        height: var(--header-height);
+    }
+
+    .nav_menu{
+
+    }
+
+    .nav_icon,
+    .nav_close,
+    .nav_toggle{
+        display: block;
+    }
+
+}

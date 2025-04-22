@@ -10,7 +10,7 @@
   --hue: 0;
   --sat: 0%;
   /* color mode: HSL (hue,sat,light) */
-  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color: hsl(var(--hue), var(--sat), 30%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
@@ -174,7 +174,11 @@ img {
 /*===============================Break Points========================================*/
 /* --- large devices --- */
 @media screen and (max-width:992px) {
+  .container{
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
 
+  }
 }
 
 /* --- medium devices --- */
